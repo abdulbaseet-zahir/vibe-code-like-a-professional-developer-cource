@@ -14,7 +14,11 @@ By the end of this session, you will:
 
 ### "Attention Is All You Need" - The Paper That Changed Everything
 
+**Paper**: [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
 In 2017, a team at Google published a paper with a bold title: "Attention Is All You Need." This wasn't just academic hubris—it was a declaration that would fundamentally reshape artificial intelligence and, by extension, how we code today.
+
+![Attention Is All You Need Paper](assets/attention-is-all-you-need-paper.png)
 
 #### Historical Context and Motivation
 
@@ -25,6 +29,8 @@ Before transformers, the AI world was dominated by recurrent neural networks (RN
 - **Context Loss**: Important information from early parts of sequences was often forgotten
 
 The transformer architecture solved these problems with a revolutionary approach: **attention mechanisms** that could look at all parts of a sequence simultaneously.
+
+![Transformer Architecture](assets/transformer-architecture.png)
 
 #### Key Innovations: Self-Attention and Multi-Head Attention
 
@@ -37,6 +43,7 @@ Example: "The cat sat on the mat because it was comfortable"
 - When processing "it", self-attention strongly attends to "cat" and "mat"
 - The model learns that "it" refers to "cat" (not "mat") based on context
 ```
+![Self-Attention Mechanism](assets/self-attention-mechanism.png)
 
 **Multi-Head Attention**
 Instead of using one attention mechanism, transformers use multiple "heads" that focus on different aspects:
@@ -99,6 +106,7 @@ Word2Vec (2013): "king - man + woman = queen"
 - **Limitations**: Sequential processing, long-range dependency issues
 
 ### Transformer Era Milestones
+![Transformer Era Milestones](assets/transformer-era-milestones.png)
 
 #### GPT-1 (2018): Generative Pre-Training Revolution
 **Key Innovation**: Unsupervised pre-training + supervised fine-tuning
@@ -209,20 +217,7 @@ This process made ChatGPT:
 - More engaging in conversation
 - Less likely to produce harmful content
 
-#### User Adoption and Societal Impact
-
-**The Viral Spread**
-- **Week 1**: Researchers and tech enthusiasts
-- **Week 2**: Viral social media demonstrations
-- **Month 1**: Students using for homework
-- **Month 2**: Businesses exploring integration
-- **Month 3**: Regulatory discussions begin
-
-**Cultural Impact**
-- **Education**: Debates about academic integrity
-- **Work**: Discussions about job displacement
-- **Creativity**: New forms of human-AI collaboration
-- **Society**: Broader awareness of AI capabilities
+---
 
 ### The AI Arms Race
 
@@ -394,158 +389,3 @@ target = "mat"
 - Adversarial testing for harmful outputs
 - Identify and fix potential misuse cases
 - Continuous improvement process
-
----
-
-## 1.5 Hands-on Exploration
-
-### Interactive Demos with Different LLMs
-
-#### Exercise 1: Model Comparison
-Try the same prompt with different models and compare:
-
-**Prompt**: "Explain the concept of recursion in programming with a simple example."
-
-**Models to Try**:
-- ChatGPT (GPT-3.5/4)
-- Claude (Anthropic)
-- Bard (Google)
-- Copilot (Microsoft)
-
-**What to Observe**:
-- Explanation clarity
-- Code example quality
-- Different teaching approaches
-- Accuracy of information
-
-#### Exercise 2: Temperature and Creativity
-Test the same creative prompt with different temperature settings:
-
-**Prompt**: "Write a short story about a robot learning to paint."
-
-**Temperature Settings**:
-- 0.1 (deterministic, focused)
-- 0.7 (balanced)
-- 1.0 (creative, random)
-
-**Observations**:
-- How does creativity change?
-- What about coherence?
-- When is each setting appropriate?
-
-#### Exercise 3: Context Window Testing
-Test how models handle long context:
-
-**Prompt**: Provide a long document and ask the model to:
-- Summarize the main points
-- Answer specific questions about details
-- Identify inconsistencies
-
-**What to Test**:
-- Context length limits
-- Information retention
-- Accuracy across the context
-
-### Understanding Model Limitations and Biases
-
-#### Common Limitations
-
-**Hallucination**
-```python
-# Example hallucination
-User: "What's the capital of Atlantis?"
-Model: "The capital of Atlantis is Poseidonia..."
-# Model invents plausible-sounding but false information
-```
-
-**Cutoff Date Issues**
-```python
-# Information cutoff
-User: "What happened in the 2024 Olympics?"
-Model: "I don't have information about events after my training cutoff..."
-```
-
-**Reasoning Limitations**
-```python
-# Logical reasoning challenges
-User: "If I have 3 apples and eat 2, how many do I have?"
-Model: "1 apple" ✓
-User: "If I have 3 apples and eat 2, then buy 5 more, eat 1, and give away 3, how many do I have?"
-Model: May make arithmetic errors in complex scenarios
-```
-
-#### Bias Identification
-
-**Cultural Bias**
-- Test prompts about different cultures
-- Observe stereotypical responses
-- Notice western-centric perspectives
-
-**Gender Bias**
-- Test profession associations
-- Observe gendered language patterns
-- Notice assumptions about roles
-
-**Mitigation Strategies**
-- Diverse training data
-- Bias testing and evaluation
-- Continuous monitoring and updates
-
-### Key Takeaways from Hands-On Exploration
-
-1. **No Perfect Model**: Each model has strengths and weaknesses
-2. **Context Matters**: Same model behaves differently with different prompts
-3. **Limitations Are Real**: Understanding them helps you use AI more effectively
-4. **Bias Exists**: Being aware helps you account for it
-5. **Continuous Evolution**: Models improve rapidly, stay updated
-
----
-
-## 🎯 Session Summary
-
-### What We've Covered
-- **Transformer Revolution**: The architectural breakthrough that enabled modern AI
-- **Evolution Timeline**: From statistical models to GPT-4 and beyond
-- **ChatGPT Impact**: How one application changed the world's perception of AI
-- **Technical Deep Dive**: How LLMs actually work under the hood
-- **Hands-On Experience**: Direct interaction with different models and their capabilities
-
-### Key Insights for Developers
-1. **Understanding Architecture**: Knowing how transformers work helps you use them better
-2. **Model Selection**: Different models excel at different tasks
-3. **Limitation Awareness**: Knowing what models can't do is as important as knowing what they can
-4. **Rapid Evolution**: The field moves fast; continuous learning is essential
-5. **Practical Application**: Theory matters, but hands-on experience is crucial
-
-### Preparing for Session 2
-In our next session, we'll dive deep into **Prompt Engineering & Context Engineering Mastery**. We'll learn how to:
-- Craft prompts that get better results
-- Manage context windows effectively
-- Develop systematic approaches to AI interaction
-- Build coding-specific prompting skills
-
-**Pre-Session 2 Assignment**:
-1. Experiment with different prompting approaches for a coding task
-2. Document what works well and what doesn't
-3. Come prepared with specific prompting challenges you've encountered
-
----
-
-## 📚 Additional Resources
-
-### Essential Reading
-- **"Attention Is All You Need"** - Vaswani et al. (2017)
-- **"Language Models are Few-Shot Learners"** - Brown et al. (2020)
-- **"Training language models to follow instructions with human feedback"** - Ouyang et al. (2022)
-
-### Recommended Exploration
-- **OpenAI API Playground**: Direct experimentation with GPT models
-- **Hugging Face Model Hub**: Explore different open-source models
-- **Papers with Code**: Stay current with latest research
-
-### Community Resources
-- **r/MachineLearning**: Reddit community for ML discussions
-- **AI Twitter**: Follow researchers and practitioners
-- **Discord Communities**: Real-time discussions with peers
-
-Ready to move from understanding AI to mastering AI interaction? Let's continue to Session 2! 
